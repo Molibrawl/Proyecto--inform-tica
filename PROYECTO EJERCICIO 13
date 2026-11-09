@@ -1,0 +1,76 @@
+/*13. Leer tres calificaciones, calcular el promedio y clasificar al alumno: exento
+(promedio ≥ 9), ordinario (6 a 8.99) o extra (&lt; 6). Si tiene alguna calificación menor
+a 6, no puede estar exento aunque su promedio sea alto.*/
+
+#include <stdio.h>
+int main(){
+
+//Variables para solicitar datos al usuario
+
+float calif1;
+
+float calif2;
+
+float calif3;
+
+float suma;
+
+float producto;
+
+float promedio;
+
+
+printf("Ingresa calif1 :");
+
+scanf("%f",&calif1);
+
+printf("Ingresa el calif2 :");
+
+scanf("%f",&calif2);
+
+printf("Ingresa calif3 :");
+
+scanf("%f",&calif3);
+
+//Operaciones
+
+
+
+suma=calif1 + calif2 + calif3;
+
+promedio = suma / 3;
+
+//Mostrar promedio
+
+printf("\nEl promedio es: %.2f",promedio);
+
+//Condicionales para clasificar al alumno
+
+if(calif1 < 6 || calif2 < 6 || calif3 < 6)
+{
+    printf("\nEl alumno es ordinario o extra.");
+}
+else
+{
+    if(promedio >= 9)
+    {
+        printf("\nEl alumno esta exento.");
+    }
+    else
+    {
+        if(promedio >= 6)
+        {
+            printf("\nEl alumno es ordinario.");
+        }
+        else
+        {
+            printf("\nEl alumno es extra.");
+        }
+    }
+}
+
+}
+
+
+
+
